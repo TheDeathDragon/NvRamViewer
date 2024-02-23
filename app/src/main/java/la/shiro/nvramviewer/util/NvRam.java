@@ -7,6 +7,7 @@ import com.android.internal.util.HexDump;
 import java.util.ArrayList;
 
 import vendor.mediatek.hardware.nvram.V1_0.INvram;
+
 /**
  * author: Wang RuiLong
  * Date: 2024/02/22 20:50
@@ -19,8 +20,14 @@ public class NvRam {
     private static final int PRODUCT_INFO_SIZE = 1024;
 
     public static String getSn() {
-        String sn = getAllFlagsFromNvRam().split(" ")[0];
-        Log.d(TAG, "getSn --> sn: " + sn);
+        String sn = getAllFlagsFromNvRam();
+        Log.d(TAG, "getSn --> sn: [" + sn + "]");
+        // if sn start with 0x20 or 0x00, the sn is empty ,otherwise split with 0x20
+        if (sn.startsWith(" ") || sn.startsWith("\0")) {
+            sn = "N/A";
+        } else {
+            sn = sn.split(" ")[0];
+        }
         return sn;
     }
 
