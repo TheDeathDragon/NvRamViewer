@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="30dp"
+    android:isScrollContainer="true"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="NvRam Test"
+        android:layout_marginBottom="30dp"
+        android:textAlignment="viewStart"
+        android:minHeight="150dp" />
+
+    <Button
+        android:id="@+id/btn_dumpNvRam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dump NvRam" />
+
+    <Button
+        android:id="@+id/btn_get_sn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Get SN" />
+
+
+    <Button
+        android:id="@+id/btn_get_test_flags"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Get Test Flags" />
+
+    <Button
+        android:id="@+id/btn_get_all_flags"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Get All Flags" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_flag_index"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Flag Index"
+            android:inputType="numberDecimal"
+            android:maxLength="2" />
+
+        <Switch
+            android:id="@+id/sw_flag_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:text="Flag State F/P"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_get_flag_by_index"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Get Flag" />
+
+    <Button
+        android:id="@+id/btn_set_flag_by_index"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Set Flag" />
+
+    <Button
+        android:id="@+id/btn_unset_flag_by_index"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="UnSet Flag" />
+
+    <Button
+        android:id="@+id/btn_init_nvram"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Init NvRam" />
+
+
+</LinearLayout>
